@@ -43,6 +43,7 @@ const formatPrice = price => new Intl.NumberFormat('vi-VN').format(price)
 
 let idTimeout = null
 let idImage = ref(0)
+
 const caroselImage = () => {
   console.log('onMounted')
   idTimeout = setInterval(() => {
@@ -62,7 +63,17 @@ onUnmounted(() => clearInterval(idTimeout))
   <div class="product-card" v-for="product in products" :key="product.id">
     <div class="imgs">
       <img :src="product?.images[idImage]" :alt="product.name" />
-      <div class="tags"></div>
+      <div class="tags">
+        <div v-if="product.tags.topDeal" class="tag">
+          <img src="../../assets//images/lab2/top-deal.png" alt="" />
+        </div>
+        <div v-if="product.tags.freeShip" class="tag">
+          <img src="../../assets//images/lab2/freeship-xtra.png" alt="" />
+        </div>
+        <div v-if="product.tags.official" class="tag">
+          <img src="../../assets//images/lab2/chinh-hang.png" alt="" />
+        </div>
+      </div>
     </div>
     <div class="product-info">
       <p class="name">{{ product.name }}</p>
@@ -116,10 +127,18 @@ onUnmounted(() => clearInterval(idTimeout))
   overflow: hidden;
   text-overflow: ellipsis;
   min-height: 2.8em;
+  margin-top: 6px;
+}
+.imgs {
+  height: 210px;
+  position: relative;
+  overflow: hidden;
 }
 .imgs img {
   width: 100%;
+  height: 196px;
   object-fit: cover;
+  object-position: center;
 }
 .current-price {
   color: rgb(255, 66, 78);
@@ -172,5 +191,14 @@ onUnmounted(() => clearInterval(idTimeout))
   font-weight: 400;
   border-top: 1px solid #e0e0e0;
   padding: 8px 0;
+}
+.tags {
+  position: absolute;
+  bottom: -7px;
+  left: 10px;
+  display: flex;
+}
+.tags img {
+  height: 40px;
 }
 </style>

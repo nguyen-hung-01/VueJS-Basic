@@ -8,7 +8,7 @@
     "origin": "Việt Nam",
     "originalPrice": 299000,
     "tags": {
-      "topDeal": true,
+      "topDeal": false,
       "official": true,
       "freeShip": true
     },
