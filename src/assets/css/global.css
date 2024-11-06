@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  font-family: 'Roboto', serif;
+  font-style: normal;
+}
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#wrapper {
+  width: 100%;
+  margin: auto;
+}
+.menu-top {
+  background-color: rgb(53, 53, 53);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 0;
+  margin-bottom: 50px;
+}
+.menu-top a {
+  color: white;
+  text-decoration: none;
+}
+.menu-top a.active {
+  color: rgb(0, 229, 255);
+  border-bottom: 2px solid rgb(0, 155, 239);
+}

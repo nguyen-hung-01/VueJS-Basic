@@ -1,0 +1,158 @@
+[
+  {
+    "id": 1,
+    "name": "Combo 2 Bịch NESCAFE 3IN1 Công thức cải tiến - VỊ NGUYÊN BẢN Bịch 46 gói",
+    "rating": 5,
+    "sold": 178,
+    "discount": 10,
+    "origin": "Việt Nam",
+    "originalPrice": 299000,
+    "tags": {
+      "topDeal": true,
+      "official": true,
+      "freeShip": true
+    },
+    "images": [
+      "http://localhost:5173/src/assets/images/lab2/cafe.webp",
+      "http://localhost:5173/src/assets/images/lab2/cafe1.web",
+      "http://localhost:5173/src/assets/images/lab2/cafe2.webp"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "MacBook Air M1 13 inch 2020",
+    "rating": 4,
+    "sold": 178,
+    "discount": 27,
+    "origin": "Mỹ",
+    "originalPrice": 24990000,
+    "tags": {
+      "topDeal": true,
+      "official": true,
+      "freeShip": true
+    },
+    "images": [
+      "http://localhost:5173/src/assets/images/lab2/macbook.webp",
+      "http://localhost:5173/src/assets/images/lab2/macbook1.webp",
+      "http://localhost:5173/src/assets/images/lab2/macbook2.webp",
+      "http://localhost:5173/src/assets/images/lab2/macbook3.webp"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Apple AirPods 3 2022 sạc Lightning - MPNY3",
+    "rating": 4,
+    "sold": 178,
+    "discount": 26,
+    "origin": "Tàu khựa",
+    "originalPrice": 5390000,
+    "tags": {
+      "topDeal": true,
+      "official": true,
+      "freeShip": true
+    },
+    "images": [
+      "http://localhost:5173/src/assets/images/lab2/airpods.webp",
+      "http://localhost:5173/src/assets/images/lab2/airpods1.webp",
+      "http://localhost:5173/src/assets/images/lab2/airpods2.webp"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Sách Combo 2 Cuốn : Tư Duy Ngược + Tư Duy Mở (Lê Nguyên Hùng) - SBOOKS",
+    "rating": 5,
+    "sold": 178,
+    "discount": 55,
+    "origin": "Việt Nam",
+    "originalPrice": 276000,
+    "tags": {
+      "topDeal": true,
+      "official": true,
+      "freeShip": true
+    },
+    "images": [
+      "http://localhost:5173/src/assets/images/lab2/book.webp",
+      "http://localhost:5173/src/assets/images/lab2/book1.webp",
+      "http://localhost:5173/src/assets/images/lab2/book2.webp"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Thùng 48 Hộp Sữa Nestlé MILO Nước (180ml / Hộp)",
+    "rating": 5,
+    "sold": 178,
+    "discount": 21,
+    "origin": "Việt Nam",
+    "originalPrice": 450000,
+    "tags": {
+      "topDeal": true,
+      "official": true,
+      "freeShip": true
+    },
+    "images": [
+      "http://localhost:5173/src/assets/images/lab2/milo.webp",
+      "http://localhost:5173/src/assets/images/lab2/milo1.webp",
+      "http://localhost:5173/src/assets/images/lab2/milo2.webp"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Điện thoại Redmi Note 13R 5G 4GB/128GB Dimensity 6100+ , Màn 90Hz , Rom quốc tế có sẳn Tiếng việt - Hàng nhập khẩu",
+    "rating": 5,
+    "sold": 178,
+    "discount": 26,
+    "origin": "Tàu Khựa",
+    "originalPrice": 450000,
+    "tags": {
+      "topDeal": true,
+      "official": true,
+      "freeShip": true
+    },
+    "images": [
+      "http://localhost:5173/src/assets/images/lab2/redmi13.webp",
+      "http://localhost:5173/src/assets/images/lab2/redmi13.1.webp",
+      "http://localhost:5173/src/assets/images/lab2/redmi13.1.webp",
+      "http://localhost:5173/src/assets/images/lab2/redmi13.1.webp"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Nồi Chiên Không Dầu Điện Tử Lock&Lock EJF296BLK (7.2 Lít) - Kèm Chảo Nướng - Hàng Chính Hãng",
+    "rating": 5,
+    "sold": 178,
+    "discount": 61,
+    "origin": "Hàn Cuốc",
+    "originalPrice": 5625000,
+    "tags": {
+      "topDeal": true,
+      "official": true,
+      "freeShip": true
+    },
+    "images": [
+      "http://localhost:5173/src/assets/images/lab2/locklock.webp",
+      "http://localhost:5173/src/assets/images/lab2/locklock1.webp",
+      "http://localhost:5173/src/assets/images/lab2/locklock2.webp",
+      "http://localhost:5173/src/assets/images/lab2/locklock3.webp"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Nước Lau Sàn Gốc Thực Vật Peace Mass TD Chanh Sả - Bạc Hà Đuổi Muỗi và Côn Trùng",
+    "rating": 5,
+    "sold": 178,
+    "discount": 14,
+    "origin": "Việt Nam",
+    "originalPrice": 222000,
+    "tags": {
+      "topDeal": true,
+      "official": true,
+      "freeShip": true
+    },
+    "images": [
+      "http://localhost:5173/src/assets/images/lab2/lausan.webp",
+      "http://localhost:5173/src/assets/images/lab2/lausan1.webp",
+      "http://localhost:5173/src/assets/images/lab2/lausan2.webp",
+      "http://localhost:5173/src/assets/images/lab2/lausan3.webp"
+    ]
+  }
+]
