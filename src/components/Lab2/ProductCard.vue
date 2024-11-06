@@ -1,5 +1,5 @@
 <script setup>
-import { ref, reactive, onMounted, computed } from 'vue'
+import { ref, reactive, onMounted, computed, onUnmounted } from 'vue'
 import StarIcon from './StarIcon.vue'
 
 const products = reactive([])
@@ -18,7 +18,7 @@ const loadProducts = async () => {
 }
 onMounted(loadProducts)
 
-const deliveryDate = () => {
+const deliveryDate = (deliveryTime = 3) => {
   const today = new Date()
   const daysOfWeek = [
     'Chủ nhật',
@@ -29,21 +29,40 @@ const deliveryDate = () => {
     'Thứ 6',
     'Thứ 7',
   ]
-  const dayOfWeek = daysOfWeek[today.getDay() + 3]
-  const day = today.getDate() + 3
+
+  const dayOfWeek = daysOfWeek[(today.getDay() + deliveryTime) % 7]
+
+  today.setDate(today.getDate() + deliveryTime)
+  const day = today.getDate()
   const month = today.getMonth() + 1
 
-  return `Giao ${dayOfWeek},  ${day}/${month}`
+  return `Giao ${dayOfWeek}, ${day}/${month}`
 }
 
 const formatPrice = price => new Intl.NumberFormat('vi-VN').format(price)
+
+let idTimeout = null
+let idImage = ref(0)
+const caroselImage = () => {
+  console.log('onMounted')
+  idTimeout = setInterval(() => {
+    console.log('idImage: ', idImage)
+    if (idImage.value >= 2) {
+      idImage.value = 0
+    } else {
+      idImage.value += 1
+    }
+  }, 3000)
+}
+onMounted(caroselImage)
+onUnmounted(() => clearInterval(idTimeout))
 </script>
 
 <template>
   <div class="product-card" v-for="product in products" :key="product.id">
     <div class="imgs">
-      <img :src="product.images[0]" :alt="product.name" />
-      <div class="tags">{{ console.log(product.images) }}</div>
+      <img :src="product?.images[idImage]" :alt="product.name" />
+      <div class="tags"></div>
     </div>
     <div class="product-info">
       <p class="name">{{ product.name }}</p>
@@ -104,9 +123,10 @@ const formatPrice = price => new Intl.NumberFormat('vi-VN').format(price)
 }
 .current-price {
   color: rgb(255, 66, 78);
-  font-size: 17px;
+  font-size: 18px;
   line-height: 150%;
   font-weight: 500;
+  margin-top: 5px;
 }
 .discount {
   color: black;
@@ -127,8 +147,8 @@ const formatPrice = price => new Intl.NumberFormat('vi-VN').format(price)
 .origin {
   font-size: 12px;
   font-weight: 400;
-  color: #3c3c3d;
-  margin-top: 12px;
+  color: #4b4b4b;
+  margin-top: 15px;
   margin-bottom: 5px;
 }
 .rating-sold {
@@ -138,7 +158,7 @@ const formatPrice = price => new Intl.NumberFormat('vi-VN').format(price)
 .sold {
   font-size: 13px;
   color: #808089;
-  padding-top: 3px;
+  padding-top: 2px;
   padding-left: 5px;
   margin-left: 5px;
   border-left: 1px solid #cdcdcd;

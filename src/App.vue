@@ -119,11 +119,11 @@ const currentPage = ref('home')
 nav {
   position: fixed;
   z-index: 111111;
-  height: 600px;
-  top: 50px;
+  top: 20px;
   left: 20px;
-  padding: 30px 10px;
+  padding: 25px 5px;
   background-color: rgb(35, 35, 35);
+  border-radius: 7px;
 }
 nav li a {
   display: inline-block;
@@ -132,10 +132,13 @@ nav li a {
   cursor: pointer;
   padding: 10px 5px;
   margin: 5px 0;
-  font-size: 17px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   text-align: center;
   transition: 0.2s ease;
+}
+nav li:first-child a {
+  padding: 20px 5px;
 }
 nav li a:hover {
   color: black;
