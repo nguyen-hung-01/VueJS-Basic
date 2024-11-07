@@ -9,7 +9,9 @@ import ProductCard from './ProductCard.vue'
       <a href="#" class="active">Reactivity</a>
     </nav>
     <div class="content">
-      <h1>Tiki.com</h1>
+      <div class="logo">
+        <img src="../../assets//images//lab2/logo-tiki.png" alt="" />
+      </div>
       <div class="product-list">
         <ProductCard />
       </div>
@@ -24,5 +26,13 @@ import ProductCard from './ProductCard.vue'
   gap: 12px;
   padding: 15px;
   padding-bottom: 40px;
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.logo img {
+  width: 100px;
 }
 </style>

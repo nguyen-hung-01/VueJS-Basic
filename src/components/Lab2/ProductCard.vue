@@ -6,9 +6,7 @@ const products = reactive([])
 
 const loadProducts = async () => {
   try {
-    const reponsive = await fetch(
-      'http://localhost:5173/src/components/lab2/products.json',
-    )
+    const reponsive = await fetch('../../../public/products.json')
     if (!reponsive.ok) throw new Error('Lỗi khi tải dữ liệu sản phẩm')
     const data = await reponsive.json()
     products.push(...data)
@@ -130,7 +128,7 @@ onUnmounted(() => clearInterval(idTimeout))
   margin-top: 6px;
 }
 .imgs {
-  height: 210px;
+  height: 196px;
   position: relative;
   overflow: hidden;
 }
@@ -199,6 +197,6 @@ onUnmounted(() => clearInterval(idTimeout))
   display: flex;
 }
 .tags img {
-  height: 40px;
+  height: 35px;
 }
 </style>
