@@ -154,6 +154,7 @@ nav li a.active {
   width: 100%;
   min-height: 101vh;
   margin-bottom: 50px;
+  position: relative;
 }
 .home {
   display: flex;

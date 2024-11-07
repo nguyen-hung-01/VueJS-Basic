@@ -7,11 +7,11 @@ const products = reactive([])
 const loadProducts = async () => {
   try {
     const reponsive = await fetch('../../../public/products.json')
-    if (!reponsive.ok) throw new Error('Lỗi khi tải dữ liệu sản phẩm')
+    if (!reponsive.ok) throw new Error()
     const data = await reponsive.json()
     products.push(...data)
   } catch (error) {
-    alert(error.message)
+    alert('Lỗi khi tải dữ liệu sản phẩm')
   }
 }
 onMounted(loadProducts)
@@ -41,7 +41,6 @@ const formatPrice = price => new Intl.NumberFormat('vi-VN').format(price)
 
 let idTimeout = null
 let idImage = ref(0)
-
 const caroselImage = () => {
   console.log('onMounted')
   idTimeout = setInterval(() => {
